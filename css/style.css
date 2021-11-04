@@ -140,6 +140,10 @@ body {
   display: flex;
 }
 
+.session-time{
+  margin-bottom: 20px;
+}
+
 .session-date-item {
   display: flex;
   flex-direction: column;
@@ -282,82 +286,121 @@ body {
   text-decoration: none;
 }
 
-@media (max-width: 1200px){
-  .container{
+@media (max-width: 1200px) {
+  .container {
     max-width: 960px;
   }
-  .select-cinema{
+  .select-cinema {
     width: 100%;
   }
 }
-
-@media (max-width: 992px){
-  .container{
+@media (max-width: 992px) {
+  .container {
     max-width: 750px;
   }
-  .session{
+  .session {
     flex-wrap: wrap;
   }
-  .session-date{
+  .session-date {
     flex-basis: 70%;
     margin-bottom: 40px;
   }
-  .session-time{
+  .session-time {
     order: 2;
   }
-  .session-cinema{
+  .session-cinema {
+    margin-top: 40px;
     order: 3;
   }
-  .menu-item{
+  .menu-item {
     margin-right: 20px;
   }
 }
-
-@media (max-width: 768px){
-  .container{
-    max-width: 560px;
-  }
-  .menu{
+@media (max-width: 768px) {
+  .menu {
     position: absolute;
     left: 0;
     top: 40px;
-    margin-left: 20px;
     padding: 20px;
+    margin-left: 20px;
+    flex-direction: column;
     background-color: #621402;
     z-index: 9;
     border-radius: 10px;
-    flex-direction: column;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(-100%);
+    transform: translateY(25%);
     transition: opacity 0.5s, transform 0.5s;
   }
-  .menu-item:not(:last-child){
+  .menu-item:not(:last-child) {
     margin-bottom: 10px;
   }
-  .m-menu{
+  .m-menu {
     display: block;
     background-color: transparent;
     border: none;
     width: 40px;
     height: 40px;
-    margin-left: 10px;
+    margin-top: 20px;
+    margin-left: 20px;
     cursor: pointer;
   }
-  .is-open{
+  .is-open {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0);
+    transform: translateY(0);
   }
-  .film-description{
+  .film-description {
     margin-right: 30px;
   }
-  .film{
+  .film {
     flex-direction: column;
   }
-  .film-trailer{
+  .film-trailer {
     margin-right: auto;
     margin-left: 0;
     margin-top: 40px;
+  }
+}
+@media (max-width: 590px) {
+  .container {
+    max-width: 390px;
+  }
+  .film {
+    flex-wrap: wrap;
+  }
+  .film-trailer {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin: auto;
+  }
+  .session {
+    display: block;
+  }
+  .session-date {
+    margin-bottom: 20px;
+  }
+  .session-time {
+    padding-top: 40px;
+    margin-left: 0px;
+  }
+  .legend {
+    flex-wrap: wrap;
+  }
+  .legend-free {
+    flex-basis: 70%;
+    margin-bottom: 20px;
+  }
+  .legend-active {
+    flex-basis: 70%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .price {
+    display: block;
+  }
+  .price-tag {
+    flex-basis: 70%;
+    margin-bottom: 40px;
   }
 }
